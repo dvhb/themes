@@ -1,0 +1,23 @@
+{
+  "name": "@dvhb/themes",
+  "version": "1.0.0",
+  "description": "Opensource dvhb themes",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dvhbru/themes.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "@dvhb/webpack": "1.3.0-beta.2",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "dev": "dvhb-webpack server",
+    "build": "npm run build:prod",
+    "build:dev": "dvhb-webpack build --app-env=development",
+    "build:prod": "dvhb-webpack build --app-env=production"
+  }
+}
