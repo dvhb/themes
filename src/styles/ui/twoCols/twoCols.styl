@@ -1,0 +1,27 @@
+/*!
+@name twoCols
+@markup 
+<div class="twoCols twoCols_center">
+    <div>first column</div>
+    <div>second multiline<br /> column</div>
+</div>
+<div class="twoCols">
+    <div class="twoCols__left">first column</div>
+    <div class="twoCols__right">second multiline<br /> column</div>
+</div>
+*/
+
+.twoCols
+    display flex
+    justify-content space-between 
+
+    &__left
+        flex 1 1 auto
+        
+    &__right
+        flex 1 1 auto 
+        text-align right  
+        
+    &_middle
+    &_center
+        align-items center 

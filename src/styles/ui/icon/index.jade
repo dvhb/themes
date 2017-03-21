@@ -1,0 +1,87 @@
+link(rel='stylesheet', href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+
+h1 Все иконки
+        
+style.
+    .svgIcon{
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        fill: #007ed2 ;
+        /*stroke: #007ed2 ;*/
+    }
+
+    .thumbnail__img{
+        font-size: 40px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-sm-4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thumbnail{
+        flex: 1 1 auto;
+    }
+
+    .thumbnail pre{
+        cursor: pointer;
+    }
+    
+section.source_section
+
+    h2 Иконки
+    
+    div
+
+        .container
+            .row.col-md-9
+
+        script.
+
+            requirejs.config({
+                appDir: '.',
+                paths: {
+                    'clipboard': ['//cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min'],
+                    'bootstrap': [
+                        '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min'
+                    ]
+                }
+            });
+
+            require(['clipboard', 'bootstrap', 'jquery'], function (Clipboard) {
+
+                $(function () {
+                    var $symbol = $('svg symbol');
+                    var $container = $('.container .row');
+                    var $html = '';
+
+                    $.each($symbol, function (i) {
+
+                        $html += '<div class="col-md-4"><div class="thumbnail"><div class="thumbnail__img"><svg class="svgIcon"><use xlink:href="#' + $(this).attr('id') + '"></div> <!--<p><pre data-toggle="tooltip" data-placement="top" title="Copy" >svg.b-svgIcon \n    use(xlink:href="#' + $(this).attr('id') + '")</pre></p>--> <p><pre data-toggle="tooltip" data-placement="top" title="Copy">+icon(\'' + $(this).attr('id') + '\')</pre></p> </div></div>';
+
+                    })
+
+                    $container.html($html);
+
+                    //tooltip
+                    $('[data-toggle="tooltip"]').tooltip();
+
+
+                    // copy to clipboard
+                    new Clipboard('.thumbnail pre', {
+                        target: function (trigger) {
+                            return trigger;
+                        }
+                    });
+                })
+            });

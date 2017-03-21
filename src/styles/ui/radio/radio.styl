@@ -1,0 +1,37 @@
+/*
+@name radio
+
+@description +radio('Text', 'Name')
+
+@markup
+<label class="radio">
+    <input class="radio__input" type="radio" name="r1">
+    <div class="radio__label">Radio</div>
+</label>
+
+<label class="radio">
+    <input class="radio__input" disabled type="radio" name="r1">
+    <div class="radio__label">Radio</div>
+</label>
+*/
+
+.radio
+    @extend .checkbox
+
+    &__label
+        &:before
+            border-radius 50%
+
+    &__input
+        &:checked + .radio__label
+            &:before
+                background-color #fff
+            &:after
+                content ''
+                width 8px
+                height 8px
+                top 5px
+                left 4px
+                background $cBlue
+                border-radius 50%
+                position absolute

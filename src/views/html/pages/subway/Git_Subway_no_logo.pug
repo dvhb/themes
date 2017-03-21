@@ -1,0 +1,114 @@
+extends ../../_partials/layout
+
+block vars
+    //- - var title='examplePage'
+
+block content
+
+    .b-intro.b-content.textLg(style="background-image: url('/img/bg_intro_subway.jpg')")
+        
+        | <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+        .section
+            h1 Схема метрополитена
+
+            p dvhbMetro — директива схемы метро для Angular.js. Позволяет выбирать станции на карте и отображать информацию о них.
+            P Github: 
+                a(href="#") dvhbru/dvhb-metro
+
+            h2 Сделано с помощью
+            div
+                a(href="#") Angular.js
+            div
+                a(href="#") React JS
+
+    .b-content.textLg
+        .section
+            h2 Зависимости
+            p Angular.js >= 1.2
+
+            h2 Установка
+            p.textGreen npm i @dvhb/metro --save
+
+
+    .b-usage.b-content
+        .section
+            h2 Использование
+
+            pre.
+                <code class="html">&lt;metro                 
+                    stations="stations"  
+                    on-select="showInfo"  
+                    map-url="./bower_components/dvhb_metro/lib/metro.svg"> 
+                    &lt;div metro-info offset="{top: 20}"> 
+                        &lt;b>{{station.name}}</b> 
+                        &lt;i>{{station.info}}</i> 
+                    &lt;/div> 
+                &lt;/metro>
+                </code>
+            pre.
+                <code class="javascript">angular                
+                    .module('App', ['dvhbMetro'])
+                    .controller('MainCtrl', function ($scope) {
+                        $scope.stations = {
+                            "Курская (Кольцевая)": "ТЦ «Атриум», 3 эт., с 9:00 до 21:00",
+                            "Фили": "ТЦ «Филёвский», 1 эт., с 10:00 до 21:00",
+                            "Войковская": "ТЦ «Войковский», 2 эт., с 8:00 до 22:00",
+                            "Спартак": "ТЦ «Колизей», 1 эт., с 8:00 до 22:00"
+                        };
+                  
+                        $scope.station = {};
+
+                        $scope.showInfo = function (names, position) {
+                            $scope.station = {
+                                name: names[0], 
+                                info: $scope.stations[names[0]]
+                            ;
+                        }
+                    })</code>
+
+    .b-demo.b-content.textLg
+        .section
+            h2 Демо
+            .form-group
+                .b-tabs
+                    .row.b-tabs__btns
+                        .col-sm-6
+                            .form-item
+                                .b-tabs__btn._active Схема метро Москвы
+                        .col-sm-6
+                            .form-item
+                                .b-tabs__btn Схема метро Санкт-Петербурга
+
+                    div
+                        img(src="http://placehold.it/750x880")
+
+            .form-group
+                .row
+                    .col-sm-6
+                        .form-item
+                            .btn.btn_block Скачать
+                    .col-sm-6
+                        .form-item
+                            .btn.btn_block Исходник на GitHub
+
+            h2 Документация
+
+            p 
+                a(href="#") http://dvhb-hybrid.readthedocs.io/en/latest/?badge=latest
+
+
+            h2 Лицензия
+
+            p Данная библиотека распространяется по лицензии MIT © 
+                a(href="#") dvhb
+            p Дизайн карты метро © Студия Артемия Лебедева
+
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js")
+
+    block extra_styles
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css")
+
+    script.
+        hljs.initHighlightingOnLoad();

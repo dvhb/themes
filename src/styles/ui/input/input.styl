@@ -1,0 +1,102 @@
+/*
+@name input
+@description jade: input.input
+
+@state :focus - Инпут в фокусе
+
+@markup
+<input class="input" placeholder="Input" />
+*/
+
+/*
+@name input disabled
+@description jade: input.input(disabled) или input.input._disabled
+
+@markup
+<input class="input" disabled placeholder="Input" />
+*/
+
+/*
+@name input error
+@description jade: input.input._error или ._error input.input
+
+@markup
+<div class="form-item">
+    <input class="input _error" placeholder="Input" />
+</div>
+
+<div class="form-item _error">
+    <input class="input" placeholder="Input" />
+</div>
+*/
+
+
+/*
+@name input with symbol counter
+@description 
+.form-item
+    input.input(disabled)
+    .form-item__counter 23
+
+@markup
+<div class="form-item">
+    <input class="input" placeholder="Input" />
+    <div class="form-item__counter">23</div>
+</div>
+<div class="form-item">
+    <textarea class="textarea" placeholder="textarea"></textarea>
+    <div class="form-item__counter">23</div>
+</div>
+
+*/
+
+
+.input
+    box-sizing border-box
+    background transparent
+    background #fff
+    box-shadow none
+    outline none
+    width 100%
+    height 30px
+    display block
+    padding 5px 10px
+    font-size 13px
+    border 1px solid $cBorder
+    border-radius 4px
+    -webkit-appearance none
+    transition-property background-color, border-color
+    transition-duration 0.4s
+    font-family 'Open Sans', sans-serif
+    color $cBlack
+
+    &::placeholder
+        opacity .3
+
+    &:focus, &.pseudo-class-focus
+        border-color $cBlue
+
+    &._disabled
+    &[disabled]
+        opacity .5
+
+    // для удобства сделал два варианта ошибки
+    ._error &
+    &._error
+        border-color $cRed
+
+/*
+@name textarea
+
+@markup
+<textarea class="textarea">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</textarea>
+*/
+
+.textarea
+    @extend .input
+    max-width 100%
+    height auto
+    width 100% 
+    min-height 100px 

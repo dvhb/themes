@@ -1,0 +1,248 @@
+/*
+@name form-item
+
+@description .form-item
+
+@markup
+<div class="form-item">
+    <input class="input">
+    <div class="form-item__counter">23</div>
+</div>
+<div class="form-item">
+    <input class="input">
+    <div class="form-item__counter">23</div>
+</div>
+*/
+
+.form-item
+    margin-bottom 20px
+    position relative
+    display block
+        
+    &__counter
+        color $cGrey
+        position absolute
+        right 10px
+        bottom 6px  
+
+    &:last-child
+        margin-bottom 0
+        
+    [class^="col-"] > &
+        margin-bottom 20px 
+
+
+/*
+@name form-group
+
+@description .form-group
+
+@markup
+<div class="form-group">
+    <input class="input">
+</div>
+<div class="form-group">
+    <input class="input">
+</div>
+*/
+
+.form-group
+    margin-bottom 60px
+
+    &:last-child
+        margin-bottom 0
+        
+    &_marginSm
+        margin-bottom 30px 
+
+
+/*
+@name form-itemInline
+
+@description .form-itemInline
+
+@state form-itemInline_smallMargin
+@state form-itemInline_top
+
+@markup
+<div class="form-itemInline">
+    <input class="input">
+</div>
+<div class="form-itemInline">
+    <input class="input">
+</div>
+*/
+
+.form-itemInline
+    margin-right 40px
+    position relative
+    display inline-block
+    vertical-align middle
+
+    &_smallMargin
+        margin-right 10px
+        
+    &_top
+        vertical-align top 
+
+
+/*
+@name .form-descr
+
+@description .form-descr
+
+@markup
+<div class="form-item">
+    <input class="input">
+    <div class="form-descr textRed">Form description error</div>
+</div>
+*/
+
+.form-descr
+    padding-top 5px
+
+
+/*
+@name form-complexRow
+
+@description .form-complexRow
+    .form-complexRow__control
+        input.input
+    .form-complexRow__text &mdash;
+    .form-complexRow__control
+        input.input
+
+@markup
+<div class="form-complexRow">
+    <div class="form-complexRow__control"><input class="input"></div> 
+    <div class="form-complexRow__text"> &mdash; </div>   
+    <div class="form-complexRow__control"><input class="input"></div>    
+</div>
+*/
+
+.form-complexRow
+    display flex
+    align-items center
+
+    &__control
+        flex 1 1 auto
+
+    &__text
+        margin 0 10px
+        
+
+/*
+@name form-label
+
+@description .form-label
+
+@state form-label_inline
+
+@markup
+<div class="form-label">Label</div>
+<input style="display: inline-block; width: 100px;" class="input">
+*/ 
+
+.form-label
+    display block
+    margin-bottom 10px
+    color $cGrey
+
+    &_inline
+        display inline-block
+        vertical-align middle
+        margin-bottom 0
+        margin-right 10px
+
+
+/*
+@name form-inputWithIcon
+
+@description .form-inputWithIcon
+
+@state form-inputWithIcon_calendar
+
+@markup
+<label class="form-inputWithIcon">
+    <input placeholder="дд.мм.гг" class="input">
+    <div class="form-inputWithIcon__control">
+        <svg class="icon"><use xlink:href="#icon_date"></use></svg>
+    </div>
+</label>
+*/ 
+
+.form-inputWithIcon
+    position relative
+    display block
+
+    &_calendar
+        width 100px 
+
+    &__control
+        cursor pointer
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        right 10px
+        font-size 16px
+        color $cBlue
+
+
+/*
+@name form-horizontal
+
+@description .form-horizontal
+
+@markup
+<div class="form-item form-horizontal"> 
+    <div class="form-horizontal__label">КОД</div>
+    <div style="width: 200px;" class="form-horizontal__control">
+        <input class="input">
+    </div>
+    <div class="form-horizontal__descr textGrey">Изделия бельевые трикотажные из смеси (сочетания) искусственных волокон (нитей) с другими волокнами (нитями) женские</div>
+</div>
+*/ 
+
+.form-horizontal
+    display flex
+
+    &__label
+        padding-top 6px
+        margin-right 20px
+        flex 0 0 auto
+        width 80px
+
+    &__control
+        flex 1 1 auto
+
+    &__descr
+        padding-top 6px
+        margin-left 10px  
+       
+
+/*
+@name form-controlInLabel
+
+@description .form-controlInLabel
+
+@markup
+<div class="radio">
+    <input name="r0" class="radio__input" type="radio">
+    <div class="radio__label">До даты &nbsp;
+        <div class="form-controlInLabel">
+            <div class="form-inputWithIcon form-inputWithIcon_calendar">
+                <input class="input">
+                <div class="form-inputWithIcon__control">
+                    <svg class="icon"><use xlink:href="#icon_date"></use></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+*/ 
+
+.form-controlInLabel
+    display inline-block
+    margin-top -6px
+    margin-bottom -6px
+    vertical-align top   

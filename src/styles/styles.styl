@@ -1,9 +1,32 @@
-@import './reset.styl'
+@import './variables';
+@import './fonts';
+@import './reset';
 
-body
-  background svg('check') no-repeat scroll 0 0
+// grid from bootstrap
+@import './ui/grid';
 
-.avatar
-  background-image url('/img/avatar.png')
-  width 24px
-  height 24px
+// helpers
+@import './ui/helpers';
+
+// UI
+@import './ui/btn';
+@import './ui/section';
+@import './ui/form';
+@import './ui/list';
+//@import './ui/twoCols';
+//@import './ui/icon';
+//@import './ui/flex';
+//@import './ui/table';
+//@import './ui/input';
+//@import './ui/checkbox';
+//@import './ui/radio';
+//@import './ui/hr';
+
+// blocks
+@import './blocks/b-intro';
+@import './blocks/b-content';
+@import './blocks/b-usage';
+@import './blocks/b-tabs';
+
+//pages
+//@import './pages/pageMain';

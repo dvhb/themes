@@ -1,0 +1,50 @@
+.table
+    width 100%
+    border-collapse collapse 
+    
+    th 
+        font-weight 600
+        text-align left  
+        border-bottom 1px solid #B6C5C8
+        background #fff 
+        
+    th
+    td
+        padding 5px 
+        position relative
+        background-clip padding-box
+        vertical-align middle 
+        
+    tr 
+        &._active
+            background rgba(#34438E, .2)
+            
+        &._activeGrey
+            background rgba(#B6C5C8, .3)
+            
+        &._active th
+        &._activeGrey th
+            background transparent
+            
+        &._topBorder
+            td 
+                border-top 1px solid #B6C5C8
+            
+    &_hover
+        tr
+            &:hover
+                background rgba(#B6C5C8, .3) 
+                
+    &_top
+        td
+        tr
+            vertical-align top 
+                
+    &__name
+        max-width 100%
+        overflow hidden 
+        text-overflow ellipsis 
+        white-space nowrap 
+        position absolute
+        top 5px
+        left 5px 

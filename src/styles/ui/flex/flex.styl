@@ -1,0 +1,33 @@
+.flex
+    display flex
+    flex-direction column 
+    flex 1 1 auto
+    overflow-y auto
+    overflow-y overlay
+    -webkit-overflow-scrolling touch
+    overflow-x hidden
+    
+    &__bar 
+        flex 0 0 auto        
+        position relative
+        
+    &__scroll
+        overflow-y auto
+        overflow-y overlay
+        -webkit-overflow-scrolling touch
+        flex 1 1 auto   
+        position relative
+        overflow-x hidden // если нужен горизонтальный скролл, лучше добавить отдельный класс
+        
+    &_bottomWhiteShadow
+        position relative
+        
+        &:after
+            content ''
+            position absolute
+            bottom 0
+            left 0
+            width 100%
+            background-image: linear-gradient(-180deg, rgba(255,255,255,0.32) 0%, #FFFFFF 100%);
+            height 30px 
+            pointer-events none
