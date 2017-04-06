@@ -3,6 +3,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
+    publicPath: '',
+
     templateVars: {
         googleAnalytics: {
             id: 'XXX',

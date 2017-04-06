@@ -1,20 +1,20 @@
 # Opensource dvhb themes
 
-## Features
+## Demo
 
-- ES2015 + modules, Babel + Stage 0
-- ESLint
-- Webpack
-- Stylus, svg sprite, svg inline
+See [@dvhb/themes](https://rawgit.com/dvhbru/themes/master/dist/index.html)
 
-## Installation
+## Use in opensource projects
+
+```
+<link rel="stylesheet" href="//rawgit.com/dvhbru/themes/master/dist/main.css">
+```
+
+## Contribute
 
 1. Install dependencies: `npm i`
 2. Make changes, contained within `src` directory
 3. Build the project to `dist` using `npm run build`
-
-
-## Commands
 
 `npm run dev`
 
