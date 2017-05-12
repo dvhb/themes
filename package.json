@@ -14,7 +14,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@dvhb/webpack": "1.3.0-beta.2",
+    "@dvhb/webpack": "1.3.1",
     "webpack": "^1.14.0"
   },
   "scripts": {
