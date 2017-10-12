@@ -11,12 +11,7 @@ html
             .page-header
                 h1 @dvhb/themes
 
-            h4 How use theme
-            pre &lt;link rel="stylesheet" href="//rawgit.com/dvhbru/themes/master/dist/main.css">
-
-            br
-
-            h4 Templates
+            h2 Templates
             .list-group
 
                 a.list-group-item(href="metro.html", target="_blank")
@@ -27,3 +22,7 @@ html
 
                 a.list-group-item(href="markdown.html", target="_blank")
                     h4 markdown
+
+            .b-usage.b-content
+                .section
+                    include:markdown-it ../../README.md

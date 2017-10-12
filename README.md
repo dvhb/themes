@@ -1,13 +1,7 @@
-# Opensource dvhb themes
-
-## Demo
-
-See [@dvhb/themes](https://rawgit.com/dvhbru/themes/master/dist/index.html)
-
-## Use in opensource projects
+## How use theme
 
 ```
-<link rel="stylesheet" href="//rawgit.com/dvhbru/themes/master/dist/main.css">
+<link rel="stylesheet" href="//dvhbru.github.io/themes/main.css">
 ```
 
 ## Contribute
