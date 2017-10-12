@@ -14,12 +14,14 @@
     "dist"
   ],
   "devDependencies": {
-    "@dvhb/webpack": "1.5.3"
+    "@dvhb/webpack": "1.5.3",
+    "gh-pages": "^1.0.0"
   },
   "scripts": {
     "dev": "dvhb-webpack server",
     "build": "npm run build:prod",
     "build:dev": "dvhb-webpack build --app-env=development",
-    "build:prod": "dvhb-webpack build --app-env=production"
+    "build:prod": "dvhb-webpack build --app-env=production",
+    "deploy": "gh-pages -d dist"
   }
 }
