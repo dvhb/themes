@@ -22,6 +22,7 @@
     "build": "npm run build:prod",
     "build:dev": "dvhb-webpack build --app-env=development",
     "build:prod": "dvhb-webpack build --app-env=production",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   }
 }
