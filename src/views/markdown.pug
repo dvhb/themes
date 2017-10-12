@@ -1,0 +1,20 @@
+extends _partials/layout
+
+block vars
+    - var title='Markdown demo page'
+
+block content
+
+    .b-usage.b-content
+        .section
+            //- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+            include:markdown-it _partials/markdown.md
+
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js")
+
+    block extra_styles
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css")
+
+    script.
+        hljs.initHighlightingOnLoad();
