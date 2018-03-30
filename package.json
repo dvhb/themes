@@ -4,7 +4,7 @@
   "description": "Opensource dvhb themes",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dvhbru/themes.git"
+    "url": "git://github.com/dvhb/themes.git"
   },
   "license": "MIT",
   "engines": {

@@ -1,7 +1,7 @@
 ## How use theme
 
 ```
-<link rel="stylesheet" href="//dvhbru.github.io/themes/main.css">
+<link rel="stylesheet" href="//dvhb.github.io/themes/main.css">
 ```
 
 ## Contribute
@@ -12,7 +12,7 @@
 
 `npm run dev`
 
-> Run development mode via [@dvhb/webpack](https://github.com/dvhbru/webpack) build tool.
+> Run development mode via [@dvhb/webpack](https://github.com/dvhb/webpack) build tool.
 
 `npm run build`
 
